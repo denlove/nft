@@ -56,6 +56,26 @@ header .titleNFT h2 {
   padding: 0.5rem;
 }
 
+main .viewSpace {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background-color: rgba(26, 26, 26, 0.8);
+  display: none;
+}
+
+main .viewSpace canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 1rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 main section {
   border: 0.063rem solid none;
   margin: 8rem 0;
@@ -71,12 +91,10 @@ main section {
 main section .nftImg {
   justify-self: flex-end;
   border: 0.063rem solid none;
+  border-radius: 1rem;
   width: 80%;
   height: 25rem;
-}
-
-main section .nftImg canvas {
-  border-radius: 1rem;
+  cursor: pointer;
 }
 
 main section .techInfo {

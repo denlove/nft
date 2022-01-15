@@ -59,16 +59,24 @@ header {
 }
 
 main {
-    // .viewSpace {
-    //     position: fixed;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100vh;
-    //     z-index: 9999;
-    //     background-color:hsla(0, 0%, 10%, 0.8);
-    //     display: none;
-    // }
+    .viewSpace {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 9999;
+        background-color:hsla(0, 0%, 10%, 0.8);
+        display: none;
+
+        canvas {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 1rem;
+            transform: translate(-50%, -50%);
+        }
+    }
 
     section {
         border: $borderRed;
@@ -81,12 +89,10 @@ main {
         .nftImg {
             justify-self: flex-end;
             border: $borderRed;
+            border-radius: 1rem;
             width: 80%;
-            height: 25rem;
-            canvas {
-                border-radius: 1rem;
-            }
-            
+            height: 25rem;       
+            cursor: pointer; 
         }
         .techInfo {
             width: 80%;
