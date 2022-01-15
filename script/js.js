@@ -11,7 +11,8 @@ const height = frame1.clientHeight;
 
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(30, width / height, 0.1, 1000);
+// scene.background = new THREE.Color(0x171717);
+const camera = new THREE.PerspectiveCamera(20, width / height, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize(width, height);
 frame1.appendChild(renderer.domElement);
@@ -30,11 +31,14 @@ renderer.render(scene, camera);
 
 
 const scene2 = new THREE.Scene();
-const camera2 = new THREE.PerspectiveCamera(30, width / height, 0.1, 1000);
+// scene2.background = new THREE.Color(0x171717);
+const camera2 = new THREE.PerspectiveCamera(20, width / height, 0.1, 1000);
 const renderer2 = new THREE.WebGLRenderer({antialias: true});
 renderer2.setSize(width, height);
 frame2.appendChild(renderer2.domElement);
 camera2.position.set(0, 0, 5);
+
+scene.background = null;
 
 scene2.add(ambientLight);
 scene2.add(pointLight);
@@ -49,7 +53,7 @@ renderer2.render(scene2, camera2);
 
 
 const scene3 = new THREE.Scene();
-const camera3 = new THREE.PerspectiveCamera(30, width / height, 0.1, 1000);
+const camera3 = new THREE.PerspectiveCamera(20, width / height, 0.1, 1000);
 const renderer3 = new THREE.WebGLRenderer({antialias: true});
 renderer3.setSize(width, height);
 frame3.appendChild(renderer3.domElement);
