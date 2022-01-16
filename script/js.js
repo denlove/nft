@@ -4,9 +4,16 @@ const height = window.innerHeight * 0.9;
 
 const appearScene = document.getElementsByClassName("nftImg")[0];
 
+const closeScene = document.getElementsByClassName("close")[0];
+closeScene.style.top = `${(height / 0.9 - height) / 2 + 10}px`;
+closeScene.style.right = `${(width / 0.9 - width) / 2}px`;
+
+
+
 appearScene.addEventListener("click", () => {
-    frame.style.display = "block";
+    
     const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x1a1a1a);
     const camera = new THREE.PerspectiveCamera(30, width / height, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setSize(width, height);
@@ -21,15 +28,18 @@ appearScene.addEventListener("click", () => {
     scene.add(pointLight);
 
     const geometryRed = new THREE.BoxGeometry();
-    const materialRed = new THREE.MeshStandardMaterial({color: 0xff0000});
+    const materialRed = new THREE.MeshStandardMaterial({color: 0x00ff00});
     const cubeRed = new THREE.Mesh(geometryRed, materialRed);
 
     scene.add(cubeRed);
-    
+
+    frame.style.display = "block";
+    frame.style.opacity = 1;
+
     function animate() {
         requestAnimationFrame(animate);
-        cubeRed.rotation.x += 0.01;
-        cubeRed.rotation.y += 0.01;
+        cubeRed.rotation.x += 0.005;
+        cubeRed.rotation.y += 0.005;
         renderer.render(scene, camera);
     }
     animate();
@@ -37,31 +47,8 @@ appearScene.addEventListener("click", () => {
 
 
 
-
-
-
-
-
-// function render1() {
-//     requestAnimationFrame(render1);
-//     cubeRed.rotation.x += 0.01;
-//     cubeRed.rotation.y += 0.01;
-//     renderer.render(scene, camera);
-// }
-// render1();
-
-// function render2() {
-//     requestAnimationFrame(render2);
-//     cubeBlue.rotation.x += 0.01;
-//     cubeBlue.rotation.y += 0.01;
-//     renderer2.render(scene2, camera2);
-// }
-// render2();
-
-// function render3() {
-//     requestAnimationFrame(render3);
-//     cubeGreen.rotation.x += 0.01;
-//     cubeGreen.rotation.y += 0.01;
-//     renderer3.render(scene3, camera3);
-// }
-// render3();
+closeScene.addEventListener("click", () => {
+    frame.removeChild(document.querySelector("canvas"));
+    frame.style.opacity = 0;
+    frame.style.display = "none";
+});

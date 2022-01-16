@@ -20,6 +20,8 @@ header {
   top: 0;
   z-index: 9998;
   background-color: #1a1a1a;
+  -webkit-box-shadow: 0 0 2rem #1a1a1a;
+          box-shadow: 0 0 2rem #1a1a1a;
 }
 
 header .titleNFT {
@@ -62,9 +64,28 @@ main .viewSpace {
   left: 0;
   width: 100%;
   height: 100vh;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
   z-index: 9999;
   background-color: rgba(26, 26, 26, 0.8);
+  opacity: 0;
   display: none;
+}
+
+main .viewSpace .close {
+  width: 2rem;
+  -webkit-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+main .viewSpace .close:hover {
+  opacity: 0.3;
 }
 
 main .viewSpace canvas {
@@ -74,6 +95,8 @@ main .viewSpace canvas {
   border-radius: 1rem;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 main section {
@@ -93,8 +116,14 @@ main section .nftImg {
   border: 0.063rem solid none;
   border-radius: 1rem;
   width: 80%;
-  height: 25rem;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
   cursor: pointer;
+}
+
+main section .nftImg:hover {
+  -webkit-box-shadow: 0 0 1rem #333333;
+          box-shadow: 0 0 1rem #333333;
 }
 
 main section .techInfo {
