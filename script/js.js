@@ -6,7 +6,7 @@ const appearScene = document.getElementsByClassName("nftImg")[0];
 
 const closeScene = document.getElementsByClassName("close")[0];
 closeScene.style.top = `${(height / 0.9 - height) / 2 + 10}px`;
-closeScene.style.right = `${(width / 0.9 - width) / 2}px`;
+closeScene.style.right = `${(width / 0.9 - width) / 2 + 10}px`;
 
 
 
@@ -14,7 +14,7 @@ appearScene.addEventListener("click", () => {
     
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x1a1a1a);
-    const camera = new THREE.PerspectiveCamera(30, width / height, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setSize(width, height);
     frame.appendChild(renderer.domElement);

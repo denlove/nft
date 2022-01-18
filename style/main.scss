@@ -5,7 +5,7 @@
 
 
 $mainBack: hsla(0, 0%, 10%, 1);
-$borderRed: 0.063rem solid none;
+$borderRed: 0.063rem solid re;
 $lightness50: hsl(0, 0%, 50%);
 $lightness70: hsl(0, 0%, 70%);
 $lightness80: hsl(0, 0%, 80%);
@@ -117,6 +117,7 @@ main {
                 box-shadow: 0 0 1rem hsl(0, 0%, 20%);
             }
         }
+
         .techInfo {
             width: 80%;
             justify-self: flex-start;
@@ -129,23 +130,23 @@ main {
             color: $lightness70;
             font-size: 1.5rem;
             font-family: 'Open Sans', sans-serif;
-        }
 
-        .nftHead {
-            .nftID, .nftYear {
-                color: $lightness50;
-                font-size: 1rem;
+            .nftHead {
+                .nftID, .nftYear {
+                    color: $lightness50;
+                    font-size: 1rem;
+                }
             }
-        }
 
-        .nftDescription {
-            text-align: justify;
-            width: 70%;
-        }
-
-        .nftPrice {
-            color: $lightness80;
-            font-weight: bold;
+            .nftDescription {
+                text-align: justify;
+                width: 70%;
+            }
+    
+            .nftPrice {
+                color: $lightness80;
+                font-weight: bold;
+            }
         }
     }
 }

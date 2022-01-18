@@ -25,7 +25,7 @@ header {
 }
 
 header .titleNFT {
-  border: 0.063rem solid none;
+  border: 0.063rem solid re;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,7 +100,7 @@ main .viewSpace canvas {
 }
 
 main section {
-  border: 0.063rem solid none;
+  border: 0.063rem solid re;
   margin: 8rem 0;
   display: -ms-grid;
   display: grid;
@@ -113,7 +113,7 @@ main section {
 
 main section .nftImg {
   justify-self: flex-end;
-  border: 0.063rem solid none;
+  border: 0.063rem solid re;
   border-radius: 1rem;
   width: 80%;
   -webkit-transition: all .3s linear;
@@ -129,7 +129,7 @@ main section .nftImg:hover {
 main section .techInfo {
   width: 80%;
   justify-self: flex-start;
-  border: 0.063rem solid none;
+  border: 0.063rem solid re;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,17 +148,17 @@ main section .techInfo {
   font-family: 'Open Sans', sans-serif;
 }
 
-main section .nftHead .nftID, main section .nftHead .nftYear {
+main section .techInfo .nftHead .nftID, main section .techInfo .nftHead .nftYear {
   color: gray;
   font-size: 1rem;
 }
 
-main section .nftDescription {
+main section .techInfo .nftDescription {
   text-align: justify;
   width: 70%;
 }
 
-main section .nftPrice {
+main section .techInfo .nftPrice {
   color: #cccccc;
   font-weight: bold;
 }
