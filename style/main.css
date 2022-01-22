@@ -78,8 +78,8 @@ main .viewSpace .close {
   transition: opacity .1s linear;
   opacity: 0.1;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 1rem;
+  right: 1rem;
   z-index: 9999;
   cursor: pointer;
 }

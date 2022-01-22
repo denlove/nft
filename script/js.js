@@ -11,13 +11,6 @@ const closeScene = document.getElementsByClassName("close")[0];
 
 
 
-
-crossPosition();
-function crossPosition() {
-    closeScene.style.top = `${(height / 0.9 - height) / 2 + 10}px`;
-    closeScene.style.right = `${(width / 0.9 - width) / 2 + 10}px`;
-}
-
 appearSceneRed.addEventListener("click", () => {
     openScene("red");
 });
