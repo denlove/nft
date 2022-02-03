@@ -1,54 +1,54 @@
 @media (max-width: 1440px) {
-  header .titleNFT {
+  .title {
     row-gap: 0rem;
   }
-  header .titleNFT h1 {
+  .title__header {
     font-size: 2.5rem;
   }
-  header .titleNFT h2 {
+  .title__subheader {
     font-size: 1.25rem;
   }
-  main section .techInfo {
+  .block-info {
     font-size: 1.25rem;
   }
-  main section .techInfo .nftHead .nftID, main section .techInfo .nftHead .nftYear {
+  .block-info__id, .block-info__year {
     font-size: 0.75rem;
   }
 }
 
 @media (max-width: 1024px) {
-  main section .techInfo {
+  .block-info {
     font-size: 1rem;
   }
-  main section .techInfo .nftHead .nftID, main section .techInfo .nftHead .nftYear {
+  .block-info__id, .block-info__year {
     font-size: 0.625rem;
   }
-  main section .techInfo .nftDescription {
+  .block-info__main {
     width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  header .titleNFT h1 {
+  .title__header {
     font-size: 2rem;
   }
-  header .titleNFT h2 {
+  .title__subheader {
     font-size: 1rem;
   }
-  main section {
+  .section {
     -webkit-column-gap: 5%;
             column-gap: 5%;
   }
-  main section .nftImg {
+  .block-img {
     width: 90%;
   }
-  main section .techInfo {
+  .block-info {
     width: 90%;
   }
 }
 
 @media (max-width: 597px) {
-  main section {
+  .section {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: 50% auto;
@@ -56,7 +56,7 @@
     -webkit-column-gap: 0%;
             column-gap: 0%;
   }
-  main section .nftImg {
+  .block-img {
     width: 70%;
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
@@ -64,7 +64,7 @@
     -ms-grid-column-align: center;
         justify-self: center;
   }
-  main section .techInfo {
+  .block-info {
     width: 90%;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
@@ -74,7 +74,7 @@
     -webkit-column-gap: 50%;
             column-gap: 50%;
   }
-  main section .techInfo .nftPrice {
+  .block-info__price {
     -ms-flex-item-align: end;
         align-self: flex-end;
   }

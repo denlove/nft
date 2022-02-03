@@ -14,7 +14,16 @@ body {
   min-height: 200vh;
 }
 
-header {
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #262626;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333333;
+}
+
+#header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -24,7 +33,7 @@ header {
           box-shadow: 0 0 2rem #1a1a1a;
 }
 
-header .titleNFT {
+.title {
   border: 0.063rem solid re;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,13 +50,13 @@ header .titleNFT {
   row-gap: 0.5rem;
 }
 
-header .titleNFT h1 {
+.title__header {
   font-family: 'Montserrat', sans-serif;
   font-size: 3.5rem;
   color: #b3b3b3;
 }
 
-header .titleNFT h2 {
+.title__subheader {
   font-family: 'Righteous', cursive;
   font-size: 1.75rem;
   background-image: -webkit-gradient(linear, left top, right top, from(#cccc00), to(#ff8000));
@@ -58,7 +67,7 @@ header .titleNFT h2 {
   padding: 0.5rem;
 }
 
-main .viewSpace {
+.view-space {
   position: fixed;
   top: 0;
   left: 0;
@@ -72,7 +81,7 @@ main .viewSpace {
   display: none;
 }
 
-main .viewSpace .close {
+.view-space__close {
   width: 2rem;
   -webkit-transition: opacity .1s linear;
   transition: opacity .1s linear;
@@ -84,11 +93,11 @@ main .viewSpace .close {
   cursor: pointer;
 }
 
-main .viewSpace .close:hover {
+.view-space__close:hover {
   opacity: 0.3;
 }
 
-main .viewSpace canvas {
+.view-space canvas {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -99,7 +108,7 @@ main .viewSpace canvas {
           box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-main section {
+.section {
   border: 0.063rem solid re;
   margin: 8rem 0;
   display: -ms-grid;
@@ -111,7 +120,7 @@ main section {
           column-gap: 10%;
 }
 
-main section .nftImg {
+.block-img {
   justify-self: flex-end;
   border: 0.063rem solid re;
   border-radius: 1rem;
@@ -121,12 +130,12 @@ main section .nftImg {
   cursor: pointer;
 }
 
-main section .nftImg:hover {
+.block-img:hover {
   -webkit-box-shadow: 0 0 1rem #333333;
           box-shadow: 0 0 1rem #333333;
 }
 
-main section .techInfo {
+.block-info {
   width: 80%;
   justify-self: flex-start;
   border: 0.063rem solid re;
@@ -143,22 +152,26 @@ main section .techInfo {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  color: #b3b3b3;
   font-size: 1.5rem;
   font-family: 'Open Sans', sans-serif;
 }
 
-main section .techInfo .nftHead .nftID, main section .techInfo .nftHead .nftYear {
+.block-info__name {
+  color: #b3b3b3;
+}
+
+.block-info__id, .block-info__year {
   color: gray;
   font-size: 1rem;
 }
 
-main section .techInfo .nftDescription {
+.block-info__main {
+  color: #b3b3b3;
   text-align: justify;
   width: 70%;
 }
 
-main section .techInfo .nftPrice {
+.block-info__price {
   color: #cccccc;
   font-weight: bold;
 }

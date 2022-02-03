@@ -1,13 +1,13 @@
-const frame = document.getElementsByClassName("viewSpace")[0];
+const frame = document.getElementsByClassName("view-space")[0];
 
 const width = window.innerWidth * 0.9;
 const height = window.innerHeight * 0.9;
 
-const appearSceneRed = document.getElementsByClassName("nftImg")[0],
-    appearSceneBlue = document.getElementsByClassName("nftImg")[1],
-    appearSceneGreen = document.getElementsByClassName("nftImg")[2];
+const appearSceneRed = document.getElementsByClassName("block-img")[0],
+    appearSceneBlue = document.getElementsByClassName("block-img")[1],
+    appearSceneGreen = document.getElementsByClassName("block-img")[2];
 
-const closeScene = document.getElementsByClassName("close")[0];
+const closeScene = document.getElementsByClassName("view-space__close")[0];
 
 
 
