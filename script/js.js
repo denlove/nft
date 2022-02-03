@@ -1,4 +1,5 @@
 const frame = document.getElementsByClassName("view-space")[0];
+const allSection = document.querySelectorAll(".section");
 
 const width = window.innerWidth * 0.9;
 const height = window.innerHeight * 0.9;
@@ -70,3 +71,30 @@ closeScene.addEventListener("click", () => {
     frame.style.opacity = 0;
     frame.style.display = "none";
 });
+
+
+const animConfig = {
+    fill: "forwards",
+    duration: 500,
+    iteration: 1
+};
+const animStyle = [
+    {opacity: 0, bottom: "-5rem"},
+    {opacity: 1, bottom: "0rem"}
+];
+const observerConfig = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5
+};
+function observerFunc(entires, observer) {
+    entires.forEach(entry => {
+        if (entry.isIntersecting) {
+            const elem = entry.target;
+            elem.animate(animStyle, animConfig);
+            observer.unobserve(elem);
+        }
+    });
+}
+const observer = new IntersectionObserver(observerFunc, observerConfig);
+allSection.forEach(elem => observer.observe(elem));

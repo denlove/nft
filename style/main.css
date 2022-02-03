@@ -10,8 +10,6 @@
 
 body {
   background-color: #1a1a1a;
-  background-attachment: fixed;
-  min-height: 200vh;
 }
 
 ::-webkit-scrollbar {
@@ -118,6 +116,8 @@ body {
   grid-auto-rows: auto;
   -webkit-column-gap: 10%;
           column-gap: 10%;
+  position: relative;
+  opacity: 0;
 }
 
 .block-img {
